@@ -125,10 +125,8 @@ document.addEventListener("DOMContentLoaded", () => {
       // When calendar closes, if no date is selected, make field invalid
       if (selectedDates.length === 0) {
         instance.element.value = "";
-        instance.element.classList.add("invalid");
         instance.element.setAttribute("aria-invalid", "true");
       } else {
-        instance.element.classList.remove("invalid");
         instance.element.setAttribute("aria-invalid", "false");
       }
     },
