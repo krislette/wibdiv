@@ -97,7 +97,7 @@ header {
 /* Main Content */
 main {
   display: flex;
-  margin-top: 4.5rem;
+  margin-top: 4.8rem;
   flex: 1;
 }
 
@@ -107,11 +107,15 @@ main section {
   justify-content: center;
 }
 
+main section:nth-child(2) {
+  flex: 1.5;
+}
+
 /* Registration Form Panel */
 .registration-container {
   width: 100%;
   max-width: 450px;
-  padding: 2rem;
+  padding: 3.5rem 2rem 2rem 2rem;
   background-color: var(--bg-color);
   border-radius: 12px;
   color: var(--light-text);
@@ -178,8 +182,13 @@ fieldset label[for="gender-radio"] {
   gap: 1rem;
 }
 
+.radio-group label {
+  cursor: pointer;
+}
+
 input[type="radio"] {
   accent-color: var(--primary-color);
+  cursor: pointer;
 }
 
 /* Password */
@@ -205,8 +214,48 @@ input[type="radio"] {
 }
 
 /* Date Field */
-input[type="date"] {
-  color-scheme: dark;
+.flatpickr-input::placeholder {
+  color: var(--text-color);
+}
+
+.date-picker {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'%3E%3C/rect%3E%3Cline x1='16' y1='2' x2='16' y2='6'%3E%3C/line%3E%3Cline x1='8' y1='2' x2='8' y2='6'%3E%3C/line%3E%3Cline x1='3' y1='10' x2='21' y2='10'%3E%3C/line%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 14px 14px;
+  background-position: calc(100% - 17px);
+}
+
+input[type="date"].form-input {
+  width: 100%;
+  box-sizing: border-box;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+input[type="date"].form-input::-webkit-calendar-picker-indicator {
+  position: absolute;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+}
+
+input[type="date"].form-input,
+select.form-input {
+  padding-right: 40px;
+}
+
+select {
+  -webkit-appearance: none;
+  appearance: none;
+  -moz-appearance: none;
+  background-image: url("https://www.freeiconspng.com/uploads/white-down-arrow-png-2.png");
+  background-repeat: no-repeat;
+  background-size: 14px 14px;
+  background-position: calc(100% - 17px);
+  cursor: pointer;
+  height: 3rem;
 }
 
 /* Terms Checkbox */
@@ -219,6 +268,7 @@ input[type="date"] {
 .terms-field input[type="checkbox"] {
   transform: scale(1.2);
   accent-color: var(--primary-color);
+  cursor: pointer;
 }
 
 .terms-field label {
@@ -245,7 +295,7 @@ input[type="date"] {
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   transition: background-color 0.2s;
 }
 
@@ -259,6 +309,7 @@ input[type="date"] {
   width: 100%;
   overflow: hidden;
   position: relative;
+  padding: 2rem;
 }
 
 .photo-container img {
@@ -356,7 +407,7 @@ footer {
 
 .popup-content button {
   background-color: var(--primary-color);
-  color: white;
+  color: var(--text-color);
   border: none;
   padding: 10px 20px;
   border-radius: 4px;
@@ -374,6 +425,10 @@ footer {
     flex-direction: column-reverse;
   }
 
+  .terms-button {
+    padding: 0.6rem 0.5rem;
+  }
+
   .registration-container {
     max-width: 100%;
     margin: 1rem;
@@ -382,6 +437,14 @@ footer {
 
   .photo-container img {
     height: 15rem;
+  }
+
+  .date-picker {
+    background-position: calc(100% - 10px) center;
+  }
+
+  select {
+    background-position: calc(100% - 10px) center;
   }
 
   .footer-container {
