@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./registration-form.css" />
     <link rel="icon" href="./assets/icon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
     <title>Registration</title>
   </head>
   <body>
@@ -96,11 +100,11 @@
               <div class="date-country-container">
                 <fieldset>
                   <input
-                    class="form-input"
+                    class="form-input date-picker"
                     type="date"
                     name="dob"
                     placeholder="Date of Birth"
-                    max="2007-03-20"
+                    max="2007-03-21"
                     required
                   />
                 </fieldset>
@@ -180,5 +184,6 @@
 
     <!-- Script -->
     <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   </body>
 </html>
