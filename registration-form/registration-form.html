@@ -48,21 +48,23 @@
               </fieldset>
               <fieldset>
                 <input
-                  class="form-input"
+                  class="form-input password-input"
                   type="password"
                   placeholder="Password"
                   minlength="8"
                   pattern="^(?=.*[0-9])(?=.*[\W_]).{8,}$"
                   required
                 />
+                <div class="password-requirements"></div>
               </fieldset>
               <fieldset>
                 <input
-                  class="form-input"
+                  class="form-input confirm-password-input"
                   type="password"
                   placeholder="Confirm Password"
                   required
                 />
+                <div class="password-match-message"></div>
               </fieldset>
               <fieldset>
                 <label for="gender-radio">Gender</label>
@@ -91,27 +93,30 @@
                   <label for="radio-3">Other</label>
                 </div>
               </fieldset>
-              <fieldset>
-                <input
-                  class="form-input"
-                  type="date"
-                  placeholder="Date of Birth"
-                  max="2007-03-20"
-                  required
-                />
-              </fieldset>
-              <fieldset>
-                <select name="country" class="form-input" required>
-                  <option value="">Select a country</option>
-                  <option value="ph">Philippines</option>
-                  <option value="jp">Japan</option>
-                  <option value="in">India</option>
-                  <option value="us">United States</option>
-                  <option value="ca">Canada</option>
-                  <option value="uk">United Kingdom</option>
-                  <option value="au">Australia</option>
-                </select>
-              </fieldset>
+              <div class="date-country-container">
+                <fieldset>
+                  <input
+                    class="form-input"
+                    type="date"
+                    name="dob"
+                    placeholder="Date of Birth"
+                    max="2007-03-20"
+                    required
+                  />
+                </fieldset>
+                <fieldset>
+                  <select name="country" class="form-input" required>
+                    <option value="">Select a country</option>
+                    <option value="ph">Philippines</option>
+                    <option value="jp">Japan</option>
+                    <option value="in">India</option>
+                    <option value="us">United States</option>
+                    <option value="ca">Canada</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="au">Australia</option>
+                  </select>
+                </fieldset>
+              </div>
               <fieldset class="terms-field">
                 <input type="checkbox" id="terms" required />
                 <label for="terms">
@@ -162,6 +167,15 @@
         <p>&copy; 2025 Krislette. All rights reserved.</p>
       </div>
     </footer>
+
+    <!-- Popup -->
+    <div id="confirmation-popup" class="popup-container">
+      <div class="popup-content">
+        <h2>Registration Successful!</h2>
+        <p>Thank you for registering.</p>
+        <button id="close-popup">Close</button>
+      </div>
+    </div>
 
     <!-- Script -->
     <script src="./script.js"></script>
