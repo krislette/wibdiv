@@ -74,6 +74,15 @@ confirmPasswordInput.addEventListener("input", validatePasswordsMatch);
 registrationForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
+  const dateInput = document.querySelector(".date-picker");
+
+  // Prevent submission if date is empty
+  if (!dateInput.value) {
+    e.preventDefault();
+    dateInput.focus();
+    return;
+  }
+
   const requirementsMet = validatePasswordRequirements();
   const passwordsMatch = validatePasswordsMatch();
 
@@ -99,4 +108,36 @@ registrationForm.addEventListener("submit", (e) => {
 // Close popup when close button is clicked
 document.querySelector("#close-popup").addEventListener("click", () => {
   document.querySelector("#confirmation-popup").style.display = "none";
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Initialize Flatpickr
+  const datePicker = flatpickr(".date-picker", {
+    maxDate: "2007-03-21",
+    dateFormat: "d/m/Y",
+    monthSelectorType: "dropdown",
+    yearSelectorType: "dropdown",
+    placeholder: "Date of Birth",
+    clickOpens: true,
+    position: "auto",
+    allowInput: true,
+    onClose: function (selectedDates, dateStr, instance) {
+      // When calendar closes, if no date is selected, make field invalid
+      if (selectedDates.length === 0) {
+        instance.element.value = "";
+        instance.element.classList.add("invalid");
+        instance.element.setAttribute("aria-invalid", "true");
+      } else {
+        instance.element.classList.remove("invalid");
+        instance.element.setAttribute("aria-invalid", "false");
+      }
+    },
+    onChange: function (selectedDates, dateStr, instance) {
+      // Validate the form when a date is selected
+      if (selectedDates.length > 0) {
+        instance.element.value = dateStr;
+        instance.element.dispatchEvent(new Event("change"));
+      }
+    },
+  });
 });
