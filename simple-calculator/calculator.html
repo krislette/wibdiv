@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./calculator.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./assets/icon.png" />
+    <title>Krislette: Calculator</title>
+  </head>
+  <body>
+    <main class="calculator">
+      <h1>Calculator</h1>
+
+      <section class="input-group">
+        <label for="num-1">First Number</label>
+        <input type="number" id="num-1" placeholder="Enter first number" />
+      </section>
+
+      <section class="input-group">
+        <label for="num-2">Second Number</label>
+        <input type="number" id="num-2" placeholder="Enter second number" />
+      </section>
+
+      <label>Operations</label>
+      <section class="buttons">
+        <button id="add"><i class="bx bx-plus"></i> Add</button>
+        <button id="subtract"><i class="bx bx-minus"></i> Subtract</button>
+        <button id="multiply"><i class="bx bx-x"></i> Multiply</button>
+        <button id="divide"><i class="bx bx-unlink"></i> Divide</button>
+      </section>
+
+      <section class="error" id="error"></section>
+
+      <label>Result</label>
+      <section class="result">
+        <span id="result"></span>
+      </section>
+    </main>
+
+    <script src="./calculator.js"></script>
+  </body>
+</html>
