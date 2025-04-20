@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./todo.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    />
+    <link rel="icon" href="./assets/icon.png" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>Krislette: To-Do</title>
+  </head>
+  <body>
+    <div class="todo-app">
+      <h1>To-Do</h1>
+
+      <section class="task-hint">
+        <p>💡Click on a task to mark it as complete.</p>
+      </section>
+
+      <section class="input-group">
+        <input type="text" id="task-input" placeholder="Enter a new task" />
+        <button id="add-task-btn"><i class="bx bx-plus"></i> Add Task</button>
+      </section>
+
+      <section class="task-counter">
+        <p><span id="tasks-count">0</span> tasks remaining</p>
+      </section>
+
+      <section class="task-list-container">
+        <ul id="task-list"></ul>
+      </section>
+
+      <div class="error-message" id="error"></div>
+    </div>
+
+    <script src="./todo.js"></script>
+  </body>
+</html>
