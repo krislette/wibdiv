@@ -1,5 +1,7 @@
+// Initializing operations
 const allOperations = ["add", "subtract", "multiply", "divide"];
 
+// Handles calculation for the chosen operation
 function calculate(operation) {
   const num1Input = document.querySelector("#num-1");
   const num2Input = document.querySelector("#num-2");
@@ -42,6 +44,7 @@ function calculate(operation) {
   resultDiv.textContent = result;
 }
 
+// Loop through all operations to add listener
 allOperations.forEach((operation) => {
   document.querySelector(`#${operation}`).addEventListener("click", () => {
     calculate(operation);
