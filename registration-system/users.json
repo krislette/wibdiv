@@ -48,5 +48,15 @@
         "country": "us",
         "profile_pic": "uploads\/680ce21e8ca7c.png",
         "registration_date": "2025-04-26 13:39:43"
+    },
+    {
+        "fullname": "Acelle Krislette Lacu\u00f1a Rosales",
+        "email": "acellekrislette@gmail.com",
+        "password": "$2y$12$5aqJ8uePr\/KdBfVER03QRulHH1YJSm95W.TnC5Taw0txWk\/CdA1yi",
+        "gender": "Female",
+        "dob": "2003-11-14",
+        "country": "ph",
+        "profile_pic": "uploads\/680ce68e30152.png",
+        "registration_date": "2025-04-26 13:58:38"
     }
 ]
