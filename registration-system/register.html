@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="icon" href="./assets/icon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <title>Krislette: Registration</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="header-container">
+        <a href="https://krislette.me" target="_blank" class="main-logo"
+          >Krislette</a
+        >
+        <a href="./terms.html" class="terms-button">Terms & Conditions</a>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Registration panel -->
+      <section>
+        <div class="registration-container">
+          <div class="form-header">
+            <h1>Register Now</h1>
+            <p>Get started</p>
+          </div>
+          <div class="main-form">
+            <!-- Changed the form action to point to the processing PHP file -->
+            <form
+              id="registration-form"
+              action="process_register.php"
+              method="POST"
+              enctype="multipart/form-data"
+            >
+              <fieldset>
+                <input
+                  class="form-input"
+                  type="text"
+                  name="fullname"
+                  placeholder="Full Name"
+                  minlength="3"
+                  required
+                />
+              </fieldset>
+              <fieldset>
+                <input
+                  class="form-input"
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  required
+                />
+              </fieldset>
+              <fieldset>
+                <input
+                  class="form-input password-input"
+                  type="password"
+                  name="password"
+                  placeholder="Password"
+                  minlength="8"
+                  pattern="^(?=.*[0-9])(?=.*[\W_]).{8,}$"
+                  required
+                />
+                <div class="password-requirements"></div>
+              </fieldset>
+              <fieldset>
+                <input
+                  class="form-input confirm-password-input"
+                  type="password"
+                  name="confirm_password"
+                  placeholder="Confirm Password"
+                  required
+                />
+                <div class="password-match-message"></div>
+              </fieldset>
+
+              <!-- Added profile picture upload field -->
+              <fieldset>
+                <label for="profile_pic">Profile Picture</label>
+                <input
+                  class="form-input file-input"
+                  type="file"
+                  name="profile_pic"
+                  id="profile_pic"
+                  accept=".jpg, .jpeg, .png"
+                  required
+                />
+                <div class="file-requirements">
+                  Only JPG, JPEG, or PNG (Max: 2MB)
+                </div>
+              </fieldset>
+
+              <fieldset>
+                <label for="gender-radio">Gender</label>
+                <div class="radio-group">
+                  <input
+                    id="radio-2"
+                    name="gender"
+                    type="radio"
+                    value="Female"
+                    required
+                  />
+                  <label for="radio-2">Female</label>
+                  <input id="radio-1" name="gender" type="radio" value="Male" />
+                  <label for="radio-1">Male</label>
+                  <input
+                    id="radio-3"
+                    name="gender"
+                    type="radio"
+                    value="Other"
+                  />
+                  <label for="radio-3">Other</label>
+                </div>
+              </fieldset>
+              <div class="date-country-container">
+                <fieldset>
+                  <input
+                    class="form-input date-picker"
+                    type="date"
+                    name="dob"
+                    placeholder="Date of Birth"
+                    max="2007-03-21"
+                    required
+                  />
+                </fieldset>
+                <fieldset>
+                  <select name="country" class="form-input" required>
+                    <option value="" disabled selected>Select a country</option>
+                    <option value="ph">Philippines</option>
+                    <option value="jp">Japan</option>
+                    <option value="in">India</option>
+                    <option value="us">United States</option>
+                    <option value="ca">Canada</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="au">Australia</option>
+                    <option value="zz">Other</option>
+                  </select>
+                </fieldset>
+              </div>
+              <fieldset class="terms-field">
+                <input type="checkbox" id="terms" name="terms" required />
+                <label for="terms">
+                  I agree to the
+                  <a href="./terms.html" target="_blank">Terms & Conditions</a>
+                </label>
+              </fieldset>
+              <button type="submit" class="submit-btn">Submit Form</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Display photo panel -->
+      <section>
+        <div class="photo-container">
+          <img src="./assets/featured-image.png" alt="Featured image" />
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container">
+        <h3>Krislette</h3>
+        <div class="footer-links">
+          <div class="link-column">
+            <h4>Contact Me</h4>
+            <ul>
+              <li>
+                <a href="mailto:acellekrislette@gmail.com"
+                  >acellekrislette@gmail.com</a
+                >
+              </li>
+              <li><a href="tel:09159442848">09159442848</a></li>
+            </ul>
+          </div>
+          <div class="link-column">
+            <h4>Legal</h4>
+            <ul>
+              <li>
+                <a href="./terms.html">Terms & Conditions</a>
+              </li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 Krislette. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="./js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  </body>
+</html>
