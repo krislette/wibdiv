@@ -1,0 +1,93 @@
+.welcome-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--bg-color);
+  border-radius: 12px;
+  color: var(--light-text);
+  text-align: center;
+}
+
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.user-info {
+  margin: 1.5rem 0;
+  text-align: left;
+  width: 100%;
+  max-width: 500px;
+}
+
+.info-item {
+  display: flex;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--input-border);
+}
+
+.info-label {
+  flex: 1;
+  color: var(--header-sub);
+}
+
+.info-value {
+  flex: 2;
+  font-weight: 500;
+}
+
+.logout-btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  color: var(--light-text);
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s;
+  margin-top: 1.5rem;
+}
+
+.logout-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Error message styling */
+.error-container {
+  background-color: rgba(221, 38, 43, 0.15);
+  border-left: 4px solid var(--error-color);
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 5px;
+}
+
+.error-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.error-list li {
+  color: var(--error-color);
+  margin-bottom: 0.5rem;
+}
+
+.success-container {
+  background-color: rgba(39, 172, 39, 0.15);
+  border-left: 4px solid var(--success-color);
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 5px;
+  color: var(--success-color);
+}
