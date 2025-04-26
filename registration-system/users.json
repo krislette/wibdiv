@@ -1,0 +1,52 @@
+[
+    {
+        "fullname": "Kuma Rosales",
+        "email": "kumarosales@gmail.com",
+        "password": "$2y$12$Rq4JRZkHbjvbK3L2xuSPk.\/oSZyHP26zgykLOOdg97QiVZ9GZmIJ2",
+        "gender": "Male",
+        "dob": "2007-03-04",
+        "country": "jp",
+        "profile_pic": "uploads\/680cddb3d9f0e.jpg",
+        "registration_date": "2025-04-26 13:20:52"
+    },
+    {
+        "fullname": "Acelle Rosales",
+        "email": "acellerosales@gmail.com",
+        "password": "$2y$12$VFAeLnY.7mG7KLmThWf53.5mu8N6QIUX0OMXWLcrrF8ant1amGgmW",
+        "gender": "Female",
+        "dob": "2007-03-05",
+        "country": "ph",
+        "profile_pic": "uploads\/680cdeffbf207.jpg",
+        "registration_date": "2025-04-26 13:26:24"
+    },
+    {
+        "fullname": "Krislette Lacuna",
+        "email": "krislettelacuna@gmail.com",
+        "password": "$2y$12$jU6Pgg8igEwtQHRfC.9fX.NeR4FfBtFNLSDw0LQeGO72HrBGqsIIO",
+        "gender": "Female",
+        "dob": "2007-03-17",
+        "country": "us",
+        "profile_pic": "uploads\/680cdf868efcf.jpg",
+        "registration_date": "2025-04-26 13:28:38"
+    },
+    {
+        "fullname": "Somebody Else",
+        "email": "the1975@gmail.com",
+        "password": "$2y$12$ISC3wedorEl3wu9zywiOS.efVJdiGHD8AycAk06E5UNVenc5sXQee",
+        "gender": "Female",
+        "dob": "2007-03-10",
+        "country": "ph",
+        "profile_pic": "uploads\/680ce0628d661.jpg",
+        "registration_date": "2025-04-26 13:32:19"
+    },
+    {
+        "fullname": "Krislette Rosales",
+        "email": "krisletterosales@gmail.com",
+        "password": "$2y$12$w\/aiZQtePvuegjRSFFz1Au9aBIfuFVDnTB\/CI.pFjHez8uV6LT.MC",
+        "gender": "Female",
+        "dob": "2007-03-10",
+        "country": "us",
+        "profile_pic": "uploads\/680ce21e8ca7c.png",
+        "registration_date": "2025-04-26 13:39:43"
+    }
+]
