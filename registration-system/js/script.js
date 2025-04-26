@@ -62,13 +62,13 @@ function validatePasswordsMatch() {
 
 // Function to validate profile picture
 function validateProfilePicture() {
-  if (!profilePicInput) return true; // Skip if element doesn't exist
+  if (!profilePicInput) return true;
 
   const file = profilePicInput.files[0];
   if (!file) return false;
 
   // Check file size (2MB = 2097152 bytes)
-  const maxSize = 2 * 1024 * 1024; // 2MB
+  const maxSize = 2 * 1024 * 1024;
 
   // Check file type
   const allowedTypes = ["image/jpeg", "image/jpg", "image/png"];
@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
   ) {
     const datePicker = flatpickr(".date-picker", {
       maxDate: "2007-03-21",
-      dateFormat: "Y-m-d", // Changed to match PHP date format
+      dateFormat: "Y-m-d",
       monthSelectorType: "dropdown",
       yearSelectorType: "dropdown",
       placeholder: "Date of Birth",
