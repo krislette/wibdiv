@@ -1,4 +1,5 @@
 <?php
+// Don't forget to create a `config.env.php` file and cp these details there
 return [
     'host' => 'localhost',
     'dbname' => 'contact_manager',
